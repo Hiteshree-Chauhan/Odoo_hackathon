@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add New Item - ReWear</title>
+  <link rel="stylesheet" href="add-item.css">
+</head>
+<body>
+  <header>
+    <h1>Add a New Clothing Item</h1>
+    <a href="dashboard.html">← Back to Dashboard</a>
+  </header>
+
+  <main>
+    <form id="addItemForm">
+      <label for="title">Item Title</label>
+      <input type="text" id="title" name="title" placeholder="e.g., Blue Denim Jacket" required>
+
+      <label for="size">Size</label>
+      <input type="text" id="size" name="size" placeholder="e.g., M, L, 32" required>
+
+      <label for="condition">Condition</label>
+      <select id="condition" name="condition" required>
+        <option value="">-- Select --</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Like New">Like New</option>
+        <option value="Good">Good</option>
+        <option value="Fair">Fair</option>
+      </select>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="Describe the item in detail..." required></textarea>
+
+      <label for="image">Upload Image</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <button type="submit">Submit Item</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Thank you for contributing to ReWear 🌿</p>
+  </footer>
+
+  <script src="add-item.js"></script>
+</body>
+</html>
