@@ -1,0 +1,155 @@
+body {
+    background-image: url('bg.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-color: #ccd5ae;
+    height: 30rem;
+    width: 50rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly;  */
+    
+}
+
+#logo {
+    background-color: #ffffff;
+    height: auto;
+    width: auto; 
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+
+#logo img {
+    height: 465px;
+    width:400px
+    
+}
+#forms {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+#forms h2 {
+  padding-top: 1px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background-color: #fdfdfd;
+}
+
+form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #588157;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  #logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  #logo img {
+    height: 60px; /* smaller logo */
+    width: auto;
+  }
+
+  #form-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  #form-section h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form label {
+    font-size: 0.9rem;
+    align-self: flex-start;
+  }
+
+  form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    background-color: #4e944f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
