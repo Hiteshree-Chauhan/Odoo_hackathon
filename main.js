@@ -1,15 +1,13 @@
 window.onload = function () {
-  const form = document.querySelector("form"); // Selects the first <form> element
+  const form = document.querySelector("form");
   const passwordInput = document.getElementById("password");
 
-  // Create and insert message containers dynamically
   const passwordMsg = document.createElement("div");
   const loginMsg = document.createElement("div");
 
   passwordMsg.style.color = "red";
   loginMsg.style.color = "green";
 
-  // Insert after password input
   passwordInput.parentNode.insertBefore(passwordMsg, passwordInput.nextSibling);
   passwordInput.parentNode.insertBefore(loginMsg, passwordMsg.nextSibling);
 
@@ -35,7 +33,6 @@ window.onload = function () {
     return issues;
   }
 
-  // Show live feedback
   passwordInput.addEventListener("input", () => {
     const password = passwordInput.value;
     const issues = checkPasswordStrength(password);
@@ -44,12 +41,11 @@ window.onload = function () {
       passwordMsg.textContent = "Weak password. Add: " + issues.join(", ");
       loginMsg.textContent = "";
     } else {
-      passwordMsg.textContent = "✅ Strong password";
+      passwordMsg.textContent = "Strong password";
       loginMsg.textContent = "";
     }
   });
 
-  // On form submit
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const password = passwordInput.value;
@@ -59,9 +55,8 @@ window.onload = function () {
       passwordMsg.textContent = "Password not strong enough. Add: " + issues.join(", ");
       loginMsg.textContent = "";
     } else {
-      passwordMsg.textContent = "";
-      loginMsg.textContent = "✅ You are logged in!";
-      form.reset();
+      // Redirect to home.html
+      window.location.href = "home.html";
     }
   });
 };
